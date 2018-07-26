@@ -8,16 +8,10 @@
 
 Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
 
-## Official Documentation
-
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
-
 ## 将 lumen 的 Artisan 命令和 Swoole 的 task 任务结合
+
+### 开启 Swoole 服务
+
+进入 artisan 目录, 执行 `php artisan start_swoole_serve` 
+
+若是要开启常驻进程, 请执行 `screen php artisan start_swoole_task_serve`
