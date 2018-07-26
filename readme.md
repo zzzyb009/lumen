@@ -10,8 +10,16 @@ Laravel Lumen is a stunningly fast PHP micro-framework for building web applicat
 
 ## 将 lumen 的 Artisan 命令和 Swoole 的 task 任务结合
 
+通过结合 lumen 框架的 commands 来实现的 swoole task 模式
+
 ### 开启 Swoole 服务
 
 进入 artisan 目录, 执行 `php artisan start_swoole_serve` 
 
 若是要开启常驻进程, 请执行 `screen php artisan start_swoole_task_serve`
+
+### 用 swoole_client 向服务端发起请求
+
+进入  artisan 目录, 指令是 `swoole_client_worker`, 这个指令有一个参数, 是其他的 artisan 指令, 指令之后带上一个 : 即可传入参数, 当前支持传入一个参数, 需要多个参数请自行修改。
+
+执行 `php artisan start_swoole_serve test_command:my_arg`, 则这个指令将向 Swoole 服务器发出执行 test_command 的请求。
