@@ -23,3 +23,9 @@ Laravel Lumen is a stunningly fast PHP micro-framework for building web applicat
 进入  artisan 目录, 指令是 `swoole_client_worker`, 这个指令有一个参数, 是其他的 artisan 指令, 指令之后带上一个 : 即可传入参数, 当前支持传入一个参数, 需要多个参数请自行修改。
 
 执行 `php artisan start_swoole_serve test_command:my_arg`, 则这个指令将向 Swoole 服务器发出执行 test_command 的请求。
+
+## 将 lumen 的 Artisan 命令和 Swoole 的 socket 任务结合
+
+进入 artisan 目录, 执行 `php artisan start_swoole_socket_server` 开启swoole socket 服务器
+
+访问 ` http://host/v1/chat/chatRoom ` 进入聊天室体验页面

@@ -16,6 +16,7 @@ class Kernel extends ConsoleKernel
         Commands\TestCommand::class,
         Commands\SwooleServer::class,
         Commands\SwooleClientWorker::class,
+        Commands\SwooleSocketServer::class,
     ];
 
     /**
